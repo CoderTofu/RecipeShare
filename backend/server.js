@@ -26,8 +26,8 @@ database.once('connected', () => {
     console.log('Database Connected');
 })
 
+
 // Start up server
 app.listen(process.env.PORT, () => {
     console.log(`Server was started on port ${process.env.PORT}`);
 });
-
