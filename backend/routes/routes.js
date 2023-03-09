@@ -32,8 +32,8 @@ router.get('/getAll', cors(), async (req, res) => {
     }
 })
 
-// Get by id
-router.get("/getOne/:id", cors(), async (req, res) => {
+// Set up product pages by id
+router.get("/pages/:id", cors(), async (req, res) => {
     try {
         const data = await Model.findById(req.params.id);
         res.status(200).json(data);
@@ -52,13 +52,19 @@ router.get("/searchByName", cors(), async (req, res) => {
 
         res.json(searchResults);
     } catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: error.message});
     }
 })
 
 // Delete feature for future update
-router.delete("/delete/:id", cors(), (req, res) => {
-    res.send("Deleted by ID")
+router.delete("/delete/:id", cors(), async (req, res) => {
+    try {
+        const id = req.params.id;
+        const data = await Model.findByIdAndDelete(id);
+        res.status(200).send({message: `Data with ${data.name} has been deleted.`});
+    } catch (error) { 
+        res.status(400).send({message: error.message});
+    }
 })
 
 module.exports = router
