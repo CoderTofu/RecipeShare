@@ -1,0 +1,52 @@
+.img-frame {
+    height: 50vw;
+    min-height: 1000px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../../public/assets/w-poster.png");
+    background-position: top left;
+    background-size: cover;
+}
+
+@media (max-width: 1000px) {
+    .img-frame {
+        background-image: url("../../public/assets/s-poster.png");
+    }
+}
+
+.landing {
+    color: #000;
+    position: relative;
+}
+
+.site-headings {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: fit-content;
+    text-align: center;
+}
+
+.creator-header, .brand-slogan {
+    font-family: var(--text-font);
+}
+
+.brand-header {
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.creator-header {
+    font-size: 40px;
+}
+
+.brand-slogan {
+    font-size: 28px;
+    width: 300px;
+}
+
+.slogan-container {
+    display: flex;
+    justify-content: center;
+}

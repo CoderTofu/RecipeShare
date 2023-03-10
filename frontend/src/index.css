@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&family=Outfit:wght@100;400;500;700&display=swap');
+:root {
+    --header-font: 'Outfit', sans-serif;
+    --text-font: 'Montserrat', sans-serif;
+
+    --main-color: #F3F31E;
+    --overlay-color: rgba(48, 50, 36, 0.43);
+}
+
+
+body {
+    background-color: #F3F31E;
+}
+
+.navbar * {
+    color: #000;
+    font-family: var(--header-font);
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+}
