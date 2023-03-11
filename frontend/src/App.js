@@ -16,7 +16,7 @@ export default function App() {
   return (
     <Router>
       <div className="navbar-container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-transparent p-4 mx-5">
+        <nav className="navbar navbar-light bg-transparent p-4 mx-5">
           <Link className="navbar-brand navbar-brand-lg">RecipeShare</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

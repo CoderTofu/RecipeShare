@@ -21,3 +21,10 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
+
+@media (max-width: 600px) {
+    .mx-5 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
