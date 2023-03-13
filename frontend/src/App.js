@@ -15,8 +15,7 @@ import Recipe from "./pages/recipe";
 export default function App() {
   return (
     <Router>
-      <div className="navbar-container">
-        <nav className="navbar navbar-light bg-transparent p-4 mx-5">
+        <nav className="navbar navbar-light p-4 mx-5 navbar-expand-lg">
           <Link className="navbar-brand navbar-brand-lg">RecipeShare</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -36,9 +35,7 @@ export default function App() {
             </ul>
           </div>
         </nav>
-      </div>
-      
-
+    
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='/recipes' element={<Recipe />} />
