@@ -32,6 +32,17 @@ router.get('/getAll', cors(), async (req, res) => {
     }
 })
 
+// Get only a specified quantity
+router.get('/get', cors(), async (req, res) => {
+    try {
+        const {skip, quantity} = req.query;
+        const data = await Model.find().skip(parseInt(skip)).limit(parseInt(quantity));
+        res.status(200).json(data);
+    } catch (error) {
+        res.status(500).json({error: error.message})
+    }
+})
+
 // Set up product pages by id
 router.get("/pages/:id", cors(), async (req, res) => {
     try {
